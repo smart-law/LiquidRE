@@ -2,21 +2,19 @@
 
 pragma solidity ^0.4.16;
 import './bancor/SmartToken.sol';
+import './Dividends.sol';
 
 contract LRET is SmartToken, Dividends {
-  struct Account {
-    uint balance;
-    uint lastDividendPoints;
-  }
-  mapping(address => Account) accounts;
-  uint totalSupply;
+
   function LRET()
-    SmartToken()
+    SmartToken("LiquidRE Token","LRET",18)
     public
   {
 
   }
+  /*
   function addAccount(addr) {
 
   }
+  */
 }
