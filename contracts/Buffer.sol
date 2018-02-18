@@ -13,6 +13,7 @@ contract Buffer {
   function Deposit(uint amount, address lret) payable{
     transferFrom(address msg.sender, address lret, uint amount);
     startingBlock = block.number;
+    bufferBalance += amount;
   }
 
 
