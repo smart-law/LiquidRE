@@ -12,6 +12,7 @@ contract Buffer {
 
   function Deposit(uint amount, address lret) payable{
     transferFrom(address msg.sender, address lret, uint amount);
+    startingBlock = block.number;
   }
 
 
@@ -24,7 +25,7 @@ contract Buffer {
     return availableAmount;
 
   }
-  
+
 
   function getUnavailableAmount(){
     return bufferBalance - getAvailableAmount();
